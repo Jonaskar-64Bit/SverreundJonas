@@ -16,15 +16,13 @@
 }
 
 /* Das Grid anordnen */
-
-.mainsite, .info1Jonas, .quiz1Jonas, .quiz2Jonas, .info2Jonas {
+.mainsite {
     display: grid; /* Macht die Seite als Grid */
     grid-template:
     'oben oben oben oben oben'
     'main main main main main'
     'unten unten unten unten unten';
 }
-
 
 /* Design und Anordnung des Footers */
 footer {
@@ -40,7 +38,6 @@ footer {
     width: 100%;
 
 }
-
 
 /* Grunddesign bestimmen */
 body {
@@ -99,15 +96,12 @@ a {
   transform: scale(1.05);
 }
 
-
-
 @media (max-width: 768px) /* Dieser Code ist zum größten Teil KI-Generiert */ /* Responsive Design für kleinere Bildschirme */ {
 
   /* Grid vereinfachen */
   .mainsite, .info1Jonas, .quiz1Jonas, .quiz2Jonas, .info2Jonas {
     grid-template:
       'oben'
-      'links'
       'main'
       'unten';
   }

@@ -83,12 +83,6 @@ body {
   height: auto;
 }
 
-
-button:hover {
-  background-color: #0b1020; /* Wenn man mit der Maus über den Button geht, wird der Hintergrund des Buttons Lila */
-}
-
-
 iframe {
     overflow: hidden; /* overflow: hidden; macht den Scrollbalken unsichtbar */
 }
@@ -129,11 +123,11 @@ iframe {
   transform: scale(1.05);
 }
 
-.links b /* Dieser Code ist KI-Generiert */ {
-background: linear-gradient(90deg, #ff4d6d, #8b5cf6, #22c55e); /* Macht den Farbverlauf */
-  background-clip: text; /* Macht den Farbverlauf nur auf den Text */
-  -webkit-background-clip: text; /* Macht den Farbverlauf nur auf den Text */
-  -webkit-text-fill-color: transparent; /* Macht den Farbverlauf nur auf den Text */
+.links b {
+background: linear-gradient(90deg, #ff4d6d, #8b5cf6, #22c55e); /* Macht den Farbverlauf */ /* Dieser Code ist KI-Generiert */
+  background-clip: text; /* Macht den Farbverlauf nur auf den Text */ /* Dieser Code ist KI-Generiert */
+  -webkit-background-clip: text; /* Macht den Farbverlauf nur auf den Text */ /* Dieser Code ist KI-Generiert */
+  -webkit-text-fill-color: transparent; /* Macht den Farbverlauf nur auf den Text */ /* Dieser Code ist KI-Generiert */
 
   font-size: 30px; /* Dieser Code ist nicht KI-Generiert */
   margin-left: 10px; /* Dieser Code ist nicht KI-Generiert */
@@ -188,11 +182,11 @@ background: linear-gradient(90deg, #ff4d6d, #8b5cf6, #22c55e); /* Macht den Farb
       'unten';
   }
 
-  /* Sidebar wird horizontal */
+  /* Sidebar wird horizontal zentriert */
   .links {
     text-align: center;
   }
-
+  /* Anpassung der Navigationsbuttons */
   .links button {
     width: 90%;
     max-width: 300px;
@@ -200,7 +194,7 @@ background: linear-gradient(90deg, #ff4d6d, #8b5cf6, #22c55e); /* Macht den Farb
     display: block;
   }
 
-  /* Quiz-Antworten flexibel */
+  /* Quiz-Antworten angepasst */
   .antwort {
     width: 90%;
     max-width: 400px;
@@ -225,10 +219,10 @@ background: linear-gradient(90deg, #ff4d6d, #8b5cf6, #22c55e); /* Macht den Farb
 }
 
 .indexVideo {
-  width: 60%; /* Dieser Code ist KI-Generiert */ /* Breite des Videos */
-  max-width: 900px; /* Dieser Code ist KI-Generiert */ /* Maximale Breite des Videos */
-  aspect-ratio: 16 / 9; /* erzwingt Querformat */ /* Dieser Code ist KI-Generiert */
-  height: auto; /* Höhe automatisch anpassen */ /* Dieser Code ist KI-Generiert */
+  width: 60%;  /* Breite des Videos */
+  max-width: 900px;  /* Maximale Breite des Videos */
+  aspect-ratio: 16 / 9; /* erzwingt Querformat */ 
+  height: auto; /* Höhe automatisch anpassen */ 
 
   display: block;  /* Macht das Video zu einem Blockelement */
   margin: 20px auto; /* Zentriert das Video horizontal und gibt ihm vertikalen Abstand */
@@ -244,21 +238,8 @@ background: linear-gradient(90deg, #ff4d6d, #8b5cf6, #22c55e); /* Macht den Farb
   border-radius: 15px;
   border: 0;
 }
-
-.leuchten {
-  background-color: #ff0000;
-  box-shadow: 0 0 20px #ff0000;
-      width: 350px;
-    padding: 15px 25px;
-    border-radius: 40px;
-}
-
-.leuchtenR {
-  background-color: #00ff88;
-  box-shadow: 0 0 20px #00ff88;
-      width: 350px;
-    padding: 15px 25px;
-    border-radius: 40px;
+.toQuizBtn:hover {
+  background-color: #0000ffb0;
 }
 
 /* Konfetti Animation auf der letzten Quiz Seite */
