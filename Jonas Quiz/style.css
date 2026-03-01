@@ -40,12 +40,12 @@ a {
 }
 /* Design und Anordnung des Footers */
 footer {
-    background-color: #333; 
+    background-color: #333;  
     color: white; 
-    text-align: center;
+    text-align: center; 
     padding: 10px 0;
     font-size: 14px;
-    height: 15px;
+    height: auto;
     position: fixed;
     bottom: 0;
     left: 0;
