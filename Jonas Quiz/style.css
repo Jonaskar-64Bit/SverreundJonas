@@ -4,8 +4,6 @@
 /* Die einzelnen Klassen benennen und konfigurieren */
 .oben { 
     grid-area: oben;
-    width: auto;
-    height: auto;
 }
 .unten {
     grid-area: unten;
@@ -19,13 +17,25 @@
 }
 
 /* Das Grid anordnen */
-
 .mainsite, .info1Jonas, .quiz1Jonas, .quiz2Jonas, .info2Jonas {
     display: grid; /* Macht die Seite als Grid */
-    grid-template: /*  */ 
+    grid-template:
     'links oben oben oben oben oben'
     'links main main main main main'
     'links unten unten unten unten unten';
+}
+/* Anpassung des Videos auf der Startseite */
+.indexVideo {
+  width: 60%;  /* Breite des Videos */
+  max-width: 900px;  /* Maximale Breite des Videos */
+  aspect-ratio: 16 / 9; /* erzwingt Querformat */ 
+  height: auto; /* Höhe automatisch anpassen */ 
+
+  display: block;  /* Macht das Video zu einem Blockelement */
+  margin: 20px auto; /* Zentriert das Video horizontal und gibt ihm vertikalen Abstand */
+
+  border-radius: 15px; /* Macht die Ecken des Videos rund */
+  box-shadow: 0 0 20px rgba(255, 77, 109, 0.6); /* Fügt einen Schatten um das Video hinzu */
 }
 /* Style des Infoicons für KI-Generierte Inhalte */
 .infoicon {
@@ -36,53 +46,18 @@
 /* Design von Links z.B. in Buttons */
 a {
     text-decoration: none; /* Entfernt die Unterstreichung von Links */
-    color: white /* Setzt die Textfarbe von Links auf Weiß */
+    color: white; /* Setzt die Textfarbe von Links auf Weiß */
 }
-/* Design und Anordnung des Footers */
-footer {
-    background-color: #333;  
-    color: white; 
-    text-align: center; 
-    padding: 10px 0;
-    font-size: 14px;
-    height: auto;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-
-}
-
 
 /* Grunddesign bestimmen */
 body {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   display: grid;
   grid-template-rows: auto 1fr auto; /* Dieser Code ist KI-Generiert */
-  margin: 0; /* Dieser Code ist KI-Generiert */
+  margin: 0;
   background: #0b1020;
   color: white;
 }
-
-/* Farbiger Rückmeldungsscreen bei Fragen */
-.falseAnswerScreenText {
-    color: red;
-}
-
-.correctAnswerScreenText {
-    color: green;
-}
-
-.NavImgQuiz {
-  display: flex;       /* Flexbox verwenden */
-  gap: 10px;           /* Abstand zwischen den Bildern */
-  align-items: center; /* Vertikal zentrieren */
-}
-.NavImgQuiz img {
-  max-width: 100%;     /* Optional: damit sie sich anpassen */
-  height: auto;
-}
-
 iframe {
     overflow: hidden; /* overflow: hidden; macht den Scrollbalken unsichtbar */
 }
@@ -104,9 +79,9 @@ iframe {
   border-radius: 999px;
   cursor: pointer;
 /* Anordnung der Button */
-  display: inline-flex; /* Dieser Code ist KI-Generiert */ 
-  align-items: center; /* Dieser Code ist KI-Generiert */
-  justify-content: center; /* Dieser Code ist KI-Generiert */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
   width: 200px;
 
@@ -114,29 +89,45 @@ iframe {
 
   box-shadow: 0 0 0 rgba(0,0,0,0); /* Dieser Code ist KI-Generiert */ /* Schatten */
 }
-
 .links button:hover /* Dieser Code ist KI-Generiert */ {
     box-shadow: /* Macht den Schatten beim Hover */
+
     0 0 20px rgba(139, 92, 246, 0.6),
     0 0 40px rgba(34, 197, 94, 0.4),
     0 0 60px rgba(255, 77, 109, 0.3);
   transform: scale(1.05);
 }
-
 .links b {
 background: linear-gradient(90deg, #ff4d6d, #8b5cf6, #22c55e); /* Macht den Farbverlauf */ /* Dieser Code ist KI-Generiert */
   background-clip: text; /* Macht den Farbverlauf nur auf den Text */ /* Dieser Code ist KI-Generiert */
   -webkit-background-clip: text; /* Macht den Farbverlauf nur auf den Text */ /* Dieser Code ist KI-Generiert */
   -webkit-text-fill-color: transparent; /* Macht den Farbverlauf nur auf den Text */ /* Dieser Code ist KI-Generiert */
 
-  font-size: 30px; /* Dieser Code ist nicht KI-Generiert */
-  margin-left: 10px; /* Dieser Code ist nicht KI-Generiert */
-  margin-top: 10px; /* Dieser Code ist nicht KI-Generiert */
-  margin-bottom: 10px; /* Dieser Code ist nicht KI-Generiert */
+  font-size: 30px;
+
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /* Design der Quiz Seiten */
-
+/* Farbiger Rückmeldungsscreen bei Fragen */
+.falseAnswerScreenText {
+    color: red;
+}
+.correctAnswerScreenText {
+    color: green;
+}
+/* Design der Navigationspfeile bei den Fragen */
+.NavImgQuiz {
+  display: flex;       /* Flexbox verwenden */
+  gap: 10px;           /* Abstand zwischen den Bildern */
+  align-items: center; /* Vertikal zentrieren */
+}
+.NavImgQuiz img {
+  max-width: 100%;     /* Optional: damit sie sich anpassen */
+  height: auto;
+}
 /* Einzelne Antwort */
 .antwort {
     /* Button Eigenschaften */
@@ -167,11 +158,40 @@ background: linear-gradient(90deg, #ff4d6d, #8b5cf6, #22c55e); /* Macht den Farb
         0 0 40px #ff00ff;
 }
 
+
+/* Design der Buttons auf den Infoseiten die zum Quiz führen */
+.toQuizBtn {
+  background-color: blue;
+  width: 150px;
+  height: 25px;
+  border-radius: 15px;
+  border: 0;
+}
+.toQuizBtn:hover {
+  background-color: #0000ffb0;
+}
+
+/* Design der Quellen Seite */
 .JonasQuellen /* Macht den Abstand zwischen den Quellenangaben größer */{
     line-height: 50px;
 }
 
-@media (max-width: 768px) /* Dieser Code ist zum größten Teil KI-Generiert */ /* Responsive Design für kleinere Bildschirme */ {
+/* Design und Anordnung des Footers */
+footer {
+    background-color: #333;  
+    color: white; 
+    text-align: center; 
+    padding: 10px 0;
+    font-size: 14px;
+    height: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) /* Responsive Design für kleinere Bildschirme */ {
 
   /* Grid vereinfachen */
   .mainsite, .info1Jonas, .quiz1Jonas, .quiz2Jonas, .info2Jonas {
@@ -218,39 +238,15 @@ background: linear-gradient(90deg, #ff4d6d, #8b5cf6, #22c55e); /* Macht den Farb
 
 }
 
-.indexVideo {
-  width: 60%;  /* Breite des Videos */
-  max-width: 900px;  /* Maximale Breite des Videos */
-  aspect-ratio: 16 / 9; /* erzwingt Querformat */ 
-  height: auto; /* Höhe automatisch anpassen */ 
-
-  display: block;  /* Macht das Video zu einem Blockelement */
-  margin: 20px auto; /* Zentriert das Video horizontal und gibt ihm vertikalen Abstand */
-
-  border-radius: 15px; /* Macht die Ecken des Videos rund */
-  box-shadow: 0 0 20px rgba(255, 77, 109, 0.6); /* Fügt einen Schatten um das Video hinzu */
-}
-
-.toQuizBtn {
-  background-color: blue;
-  width: 150px;
-  height: 25px;
-  border-radius: 15px;
-  border: 0;
-}
-.toQuizBtn:hover {
-  background-color: #0000ffb0;
-}
-
 /* Konfetti Animation auf der letzten Quiz Seite */
-/* Die Konfetti Animation wurde auf Basis von KI und einer Website erstellt */
+/* Die Konfetti Animation wurde KI-Generiert und von mir angepasst */
+
 /* Container über ganze Seite */
 .confetti-container {
   position: fixed;
   inset: 0;
   pointer-events: none;
 }
-
 .confetti {
   position: absolute;
   top: -20px;
@@ -259,7 +255,6 @@ background: linear-gradient(90deg, #ff4d6d, #8b5cf6, #22c55e); /* Macht den Farb
   opacity: 0.9;
   animation: fall linear infinite;
 }
-
 /* Fallbewegung */
 @keyframes fall {
   0% {
@@ -269,7 +264,6 @@ background: linear-gradient(90deg, #ff4d6d, #8b5cf6, #22c55e); /* Macht den Farb
     transform: translateY(110vh) rotate(720deg);
   }
 }
-
 /* viele Varianten */
 .confetti:nth-child(3n)  { background: #ff0a54; }
 .confetti:nth-child(3n+1){ background: #ffbe0b; }
@@ -285,7 +279,6 @@ background: linear-gradient(90deg, #ff4d6d, #8b5cf6, #22c55e); /* Macht den Farb
   height: 14px;
 }
 
-/* Der folgende Code wurde KI-Generiert */
 /* zufällige Position + Dauer + Delay */
 .confetti:nth-child(1)  { left: 2%;  animation-duration: 5s;  animation-delay: -1s; }
 .confetti:nth-child(2)  { left: 5%;  animation-duration: 6s;  animation-delay: -3s; }
