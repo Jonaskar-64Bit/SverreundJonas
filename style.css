@@ -1,0 +1,143 @@
+/* Die Kommentare sind alle selbst geschrieben */
+
+/* Grid Aufbau der Startseite */
+/* Die einzelnen Klassen benennen und konfigurieren */
+.oben { 
+    grid-area: oben;
+    width: auto;
+    height: auto;
+}
+.unten {
+    grid-area: unten;
+}
+.main {
+    grid-area: main;
+    padding: 20px;
+}
+
+/* Das Grid anordnen */
+
+.mainsite, .info1Jonas, .quiz1Jonas, .quiz2Jonas, .info2Jonas {
+    display: grid; /* Macht die Seite als Grid */
+    grid-template:
+    'oben oben oben oben oben'
+    'main main main main main'
+    'unten unten unten unten unten';
+}
+
+
+/* Design und Anordnung des Footers */
+footer {
+    background-color: #333; 
+    color: white; 
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    height: 15px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+}
+
+
+/* Grunddesign bestimmen */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* Dieser Code ist KI-Generiert */
+  margin: 0; /* Dieser Code ist KI-Generiert */
+  background: #0b1020;
+  color: white;
+  text-align: center;
+}
+
+iframe {
+    overflow: hidden; /* overflow: hidden; macht den Scrollbalken unsichtbar */
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Designt die Buttons in der Seitenleiste */
+.button  {
+    background: linear-gradient(90deg, #ff4d6d, #8b5cf6, #22c55e); /* Dieser Code ist KI-Generiert */
+
+    /* Macht Abstände innen und aussen */
+    margin-bottom: 10px; 
+    margin-left: 10px;
+    padding: 10px 20px;
+    /* Schrifteigenschaften */
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  /* Button Eigenschaften */
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+/* Anordnung der Button */
+  display: inline-flex; /* Dieser Code ist KI-Generiert */ 
+  align-items: center; /* Dieser Code ist KI-Generiert */
+  justify-content: center; /* Dieser Code ist KI-Generiert */
+
+  width: 200px;
+
+  transition: all 0.3s ease; /* Dieser Code ist KI-Generiert */ /* Macht die Animation bei Hover-Effekt */
+
+  box-shadow: 0 0 0 rgba(0,0,0,0); /* Dieser Code ist KI-Generiert */ /* Schatten */
+}
+
+.button:hover /* Dieser Code ist KI-Generiert */ {
+    box-shadow: /* Macht den Schatten beim Hover */
+    0 0 20px rgba(139, 92, 246, 0.6),
+    0 0 40px rgba(34, 197, 94, 0.4),
+    0 0 60px rgba(255, 77, 109, 0.3);
+  transform: scale(1.05);
+}
+
+
+
+@media (max-width: 768px) /* Dieser Code ist zum größten Teil KI-Generiert */ /* Responsive Design für kleinere Bildschirme */ {
+
+  /* Grid vereinfachen */
+  .mainsite, .info1Jonas, .quiz1Jonas, .quiz2Jonas, .info2Jonas {
+    grid-template:
+      'oben'
+      'links'
+      'main'
+      'unten';
+  }
+  .button {
+    width: 90%;
+    max-width: 300px;
+    margin: 8px auto;
+    display: block;
+  }
+  /* Padding reduzieren */
+  .main {
+    padding: 10px;
+  }
+
+  /* Footer Höhe automatisch */
+  footer {
+    height: auto;
+  }
+
+}
+
+.indexVideo {
+  width: 60%; /* Dieser Code ist KI-Generiert */ /* Breite des Videos */
+  max-width: 900px; /* Dieser Code ist KI-Generiert */ /* Maximale Breite des Videos */
+  aspect-ratio: 16 / 9; /* erzwingt Querformat */ /* Dieser Code ist KI-Generiert */
+  height: auto; /* Höhe automatisch anpassen */ /* Dieser Code ist KI-Generiert */
+
+  display: block;  /* Macht das Video zu einem Blockelement */
+  margin: 20px auto; /* Zentriert das Video horizontal und gibt ihm vertikalen Abstand */
+
+  border-radius: 15px; /* Macht die Ecken des Videos rund */
+  box-shadow: 0 0 20px rgba(255, 77, 109, 0.6); /* Fügt einen Schatten um das Video hinzu */
+}

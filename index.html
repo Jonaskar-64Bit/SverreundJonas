@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eine Eigene Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Diese Divs sind auf allen Seiten ansatzweise gleich. Den Footer gibt es nur auf der Starseite -->
+<div class="mainsite">
+        <div class="oben">
+            <!-- Marquee ist ein veraltetes HTML Tag, funktioniert aber trotzdem und es ist dafür da, einen Text zu "scrollen" -->
+            <marquee behavior="scroll" direction="right"><h1>Quiz von Sverre und Jonas</h1></marquee>
+    </div>
+<!-- Navigation zwischen den Seiten -->
+
+    <!-- Main Bereich der Seite -->
+    <div class="main">
+        <h2>Herzlich Willkommen bei unserem Quiz</h2>       
+        <!-- iFrame für das Video -->
+        <iframe class="indexVideo" src="IndexVideo.mp4" frameborder="5" width="25%" height="50%"></iframe>
+
+        <button class="button"><a href="Sverre's Quiz/index.html">Zu Sverres Quiz</a></button>
+        <button class="button"><a href="Jonas Quiz/index.html">Zu Jonas Quiz</a></button>
+
+        <h2>Wer hat was gemacht?</h2>
+        <p>Sverre hat die Infotexte zu CSS und dem Aufbau eines PCs geschrieben und die Quizze zu diesen Themen geschrieben.</p>
+        <p>Jonas hat die Infotexte zu HTML und JavaSkript geschrieben und die Quizze zu diesen Themen geschrieben.</p>
+        <p>Seiten wie die Startseite oder auch die Seite mit den Quellenangaben wurden von uns beiden geschrieben.</p>
+        <p>Der CSS Code wurde von uns beiden gemeinsam geschrieben.</p>
+        <br>
+        <p>Viel Spaß beim Ausprobieren!</p>
+        <br>
+    </div>
+
+    <footer class="unten">
+        &copy; 2026 Sverre und Jonas
+
+    </footer>
+</div>
+</body>
+</html>
